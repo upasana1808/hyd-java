@@ -2,6 +2,7 @@ package OOPS.inheritance;
 
 public class Employee extends Person{
     int empid;
+    public Employee(){}
     public Employee(String name, int age,int empId){
         super(name,age); // call to contructor of super class
         this.empid=empId;

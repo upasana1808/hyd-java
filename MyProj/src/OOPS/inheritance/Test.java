@@ -6,6 +6,9 @@ public class Test {
        // Employee e=new Employee();
         Manager m=new Manager("Uppu",32,101,"training");        
         m.show();
+        Person p1=new Employee();
+        Person p2=new Manager();
+        Employee e1=new Manager();
     }
     
 }
