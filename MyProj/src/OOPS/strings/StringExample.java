@@ -10,10 +10,7 @@ public class StringExample {
         sb.append("Upasana");
         sb.append("Hello ");
         sb.insert(1, "hello");
-
         System.out.println(sb);
-        sb.reverse();
-        
+        sb.reverse();        
     }
-
 }
