@@ -1,0 +1,8 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.project.sourcePaths": [
+        "MyProj/src",
+        "SpringBootApp/src/main/java/com/example"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
+}
