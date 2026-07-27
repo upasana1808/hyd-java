@@ -3,6 +3,7 @@ package exception;
 import java.io.FileReader;
 
 public class SampleHandle {
+    //handling
     public void method1(){
          try{
             int x=10;
@@ -15,6 +16,7 @@ public class SampleHandle {
             System.out.println("nummber exception");
         }
     }
+    //declare
     public void method2() throws Exception{
          int x=10;
         int y=0;
