@@ -5,8 +5,10 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,17 +28,21 @@ public class DataController {
     public List<String> show() {
         return list;
     }
-    @PostMapping("/add")
-    public void add() {
-        list.add("Navneet");
+     @GetMapping("/show/{id}")
+    public String showOne(@PathVariable int id) {
+        return list.get(id);
     }
-    @PutMapping("/update")
-    public void update() {
-        list.set(3, "Giri");
+    @PostMapping("/add")
+    public void add(@RequestBody String name) {
+        list.add(name);
+    }
+    @PutMapping("/update/{id}")
+    public void update(@PathVariable int id,@RequestBody String name) {
+        list.set(id,name);
     }
 
-    @DeleteMapping("/delete")
-    public void delete() {
-        list.remove(2);
+    @DeleteMapping("/delete/{id}")
+    public void delete(@PathVariable int id) {
+        list.remove(id);
 
 }}
