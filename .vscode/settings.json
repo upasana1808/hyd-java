@@ -1,8 +1,10 @@
 {
     "java.configuration.updateBuildConfiguration": "interactive",
     "java.project.sourcePaths": [
+        "SpringBootApp/src/main/java/com/example",
         "MyProj/src",
-        "SpringBootApp/src/main/java/com/example"
+        "Spring-jdbc copy/src/main/java/com/example"
     ],
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.compile.nullAnalysis.mode": "disabled"
 }

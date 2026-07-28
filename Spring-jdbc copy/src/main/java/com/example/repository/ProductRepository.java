@@ -38,29 +38,13 @@ public class ProductRepository {
 
     public Product findById(int id){
 
-    String sql = "select * from product where id=?";
+        String sql="select * from product where id=?";
 
-    List<Product> products = jdbcTemplate.query(
-            sql,
-            new BeanPropertyRowMapper<>(Product.class),
-            id);
-
-    if(products.isEmpty()){
-        return null;
+        return jdbcTemplate.queryForObject(
+                sql,
+                new BeanPropertyRowMapper<>(Product.class),
+                id);
     }
-
-    return products.get(0);
-
-}
-    // public Product findById(int id){
-
-    //     String sql="select * from product where id=?";
-
-    //     return jdbcTemplate.queryForObject(
-    //             sql,
-    //             new BeanPropertyRowMapper<>(Product.class),
-    //             id);
-    // }
 
     public int update(Product product){
 
